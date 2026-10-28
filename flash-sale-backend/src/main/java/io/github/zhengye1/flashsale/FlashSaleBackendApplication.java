@@ -1,0 +1,13 @@
+package io.github.zhengye1.flashsale;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class FlashSaleBackendApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(FlashSaleBackendApplication.class, args);
+    }
+
+}
