@@ -2,7 +2,7 @@
 
 subject=$(head -n1 "$1")
 
-case "$subject" in 
+case "$subject" in
 	("Merge "*|"Revert "*) exit 0;;
 esac
 
@@ -16,3 +16,5 @@ Example:  feat(api): add order endpoint
 EOF
 	exit 1
 fi
+
+exit 0
