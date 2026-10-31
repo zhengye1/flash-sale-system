@@ -9,5 +9,4 @@ public class TestFlashSaleBackendApplication {
                 .with(TestcontainersConfiguration.class)
                 .run(args);
     }
-
 }
