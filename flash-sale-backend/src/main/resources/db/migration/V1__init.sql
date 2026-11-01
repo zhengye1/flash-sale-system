@@ -1,0 +1,1 @@
+-- Baseline migration. Intentionally empty: tables are added with each feature (P1+).
