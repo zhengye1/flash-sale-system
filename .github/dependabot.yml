@@ -13,6 +13,18 @@ updates:
       - "chore"
       - "backend"
 
+  - package-ecosystem: npm
+    directory: /flash-sale-frontend
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    labels:
+      - "chore"
+      - "frontend"
+
   - package-ecosystem: github-actions
     directory: /
     schedule:
