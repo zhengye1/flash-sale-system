@@ -16,6 +16,18 @@ services:
       timeout: 3s
       retries: 10
 
+  app:
+    build: flash-sale-backend
+    container_name: flashsale-app
+    env_file: .env
+    environment:
+      POSTGRES_HOST: postgres
+    ports:
+      - "127.0.0.1:8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
   redis:
     image: redis:8-alpine
     container_name: flashsale-redis
