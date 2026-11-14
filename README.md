@@ -4,8 +4,13 @@
 
 1. `cp .env.example .env`
 2. `git config core.hooksPath .githooks`
-3. `docker compose up -d`
-4. `cd flash-sale-backend && ./mvnw spring-boot:run`
+3. Run everything in Docker:
+   `docker compose up -d`, then check
+   `curl localhost:8080/actuator/health` returns `UP`
+
+   Or run the backend from your IDE (for debugging, run `docker compose stop app` first if it is running):
+   `docker compose up -d postgres redis`, then
+   `cd flash-sale-backend && ./mvnw spring-boot:run`
 
 ## Roadmap
 
@@ -30,3 +35,7 @@ Formatting is enforced by Spotless with palantir-java-format.
   issue
 - Then run `./mvnw spotless:apply` and let spotless fix automatically
 - `./mvnw verify` runs `spotless:check` automatically, so the build fails if code is not formatted.
+
+## Frontend documentation
+
+See [FRONTEND](flash-sale-frontend/README.md)

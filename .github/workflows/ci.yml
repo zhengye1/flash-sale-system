@@ -28,3 +28,25 @@ jobs:
       - name: Maven Verify
         working-directory: flash-sale-backend
         run: ./mvnw verify
+
+  frontend:
+    name: Frontend lint and build
+    defaults:
+      run:
+        working-directory: 'flash-sale-frontend/'
+    runs-on: ubuntu-26.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Set up Node version
+        uses: actions/setup-node@v7.1.0
+        with:
+          node-version-file: 'flash-sale-frontend/.nvmrc'
+          cache: 'npm'
+          cache-dependency-path: 'flash-sale-frontend/package-lock.json'
+      - name: Install dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Build the Frontend
+        run: npm run build
