@@ -16,8 +16,7 @@ body:
     id: acceptance-criteria
     attributes:
       label: Acceptance Criteria
-      value: |
-        - [ ] 
+      placeholder: "- [ ] Login with a wrong password returns 401"
     validations:
       required: true
   - type: textarea
