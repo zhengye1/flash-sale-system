@@ -16,8 +16,7 @@ body:
     id: acceptance-criteria
     attributes:
       label: Acceptance Criteria
-      value: |
-        - [ ]
+      placeholder: "- [ ] docker compose up starts all services"
     validations:
       required: true
   - type: textarea
