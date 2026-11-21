@@ -13,6 +13,21 @@ updates:
       - "chore"
       - "backend"
 
+  - package-ecosystem: docker
+    directory: /flash-sale-backend
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    labels:
+      - "chore"
+      - "backend"
+    ignore:
+      - dependency-name: "eclipse-temurin"
+        update-types: ["version-update:semver-major"]
+
   - package-ecosystem: npm
     directory: /flash-sale-frontend
     schedule:
